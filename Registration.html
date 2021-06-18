@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+	<meta name="viewport" content="width-device,initial-scale=1.0">
+</head>
+<body id="image1">
+	<section id="ghgh">
+		<h2 >Registration Form</h2>
+	</section>
+	<section id="form1">
+		<form action="{% url 'form' %}" method="post">
+			{% csrf_token %}
+			<label><b>Enter First Name:</b></label><br><br>
+			<input type="text" name="fname" placeholder="first name"><br><br>
+			<label><b>Enter Last Name:</b></label><br><br>
+			<input type="text" name="lname" placeholder="last name"><br><br>
+			<label><b>Roll number:</b></label><br><br>
+			<input type="text" name="rollno" placeholder="enter your rollno"><br><br>
+			<label><b>Enter email:<b></label><br><br>
+			<input type="email" name="email" placeholder="enter your mail"><br><br>
+			<label><b>Enter mobile number:<b></label><br><br>
+			<input type="number" name="phoneno" placeholder="enter mobile number"><br><br>
+			<label id = 'lang'><b>Languages Known:</b></label><br><br>
+			<input type="checkbox" name="English">
+			<label>English</label><br>
+			<input type="checkbox" name="Hindi">
+			<label>Hindi</label><br>
+			<input type="checkbox" name="Telugu">
+			<label>Telugu</label><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</section>
+</body>
+</html>
